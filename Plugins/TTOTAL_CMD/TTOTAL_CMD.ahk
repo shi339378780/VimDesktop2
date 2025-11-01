@@ -40,6 +40,10 @@ TTOTAL_CMD(){
         ; KeyArray.push({Key:"i", Mode: "VIM模式", Group: "模式", Func: "ModeChange", Param: "VIM模式", Comment: "切换到【普通模式】"})
         KeyArray.push({Key:"<capslock>", Mode: "VIM模式", Group: "模式", Func: "VIMD_清除输入键", Param: "", Comment: "清除输入键及提示"})
         
+    ; Test===========================================================
+        ;KeyArray.push({Key:"1", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{1}", Comment: "test_1"})
+        ;KeyArray.push({Key:"2", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{2}", Comment: "test_2"})
+
     ; 控制===========================================================
         KeyArray.push({Key:"k", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{up}", Comment: "向上"})
         KeyArray.push({Key:"j", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{down}", Comment: "向下"})
@@ -383,7 +387,7 @@ TTOTAL_CMD(){
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2124, Comment: "导航_字体文件夹"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2125, Comment: "导航_网络"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2126, Comment: "导航_打印机文件夹"})
-        KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2127, Comment: "导航_回收站"})
+        KeyArray.push({Key:"Vh", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2127, Comment: "导航_回收站"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 500, Comment: "导航_切换文件夹"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2024, Comment: "导航_在左侧面板打开光标下的文件夹"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2025, Comment: "导航_在右侧面板打开光标下的文件夹"})
