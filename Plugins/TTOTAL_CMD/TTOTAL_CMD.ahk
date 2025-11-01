@@ -41,10 +41,10 @@ TTOTAL_CMD(){
         KeyArray.push({Key:"<capslock>", Mode: "VIM模式", Group: "模式", Func: "VIMD_清除输入键", Param: "", Comment: "清除输入键及提示"})
         
     ; 控制===========================================================
-        KeyArray.push({Key:"w", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{up}", Comment: "向上"})
-        KeyArray.push({Key:"s", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{down}", Comment: "向下"})
-        KeyArray.push({Key:"*h", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{left}", Comment: "向左"})
-        KeyArray.push({Key:"*l", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{right}", Comment: "向右"})
+        KeyArray.push({Key:"k", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{up}", Comment: "向上"})
+        KeyArray.push({Key:"j", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{down}", Comment: "向下"})
+        KeyArray.push({Key:"h", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{left}", Comment: "向左"})
+        KeyArray.push({Key:"l", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{right}", Comment: "向右"})
         KeyArray.push({Key:"z", Mode: "VIM模式", Group: "控制", Func: "SendKeyInput", Param: "{Enter}", Comment: "确认（Enter）"})
         KeyArray.push({Key:"gg", Mode: "VIM模式", Group: "控制", Func: "TC_GotoLine", Param: 1, Comment: "VIM_移动第一行"})
         KeyArray.push({Key:"G", Mode: "VIM模式", Group: "控制", Func: "TC_GotoLine", Param: 0, Comment: "VIM_移动到最后一行"})
@@ -373,7 +373,7 @@ TTOTAL_CMD(){
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 575, Comment: "导航_文件夹历史记录(未精简)"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 573, Comment: "导航_上一个本地文件夹"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 574, Comment: "导航_下一个本地文件夹"})
-        KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 526, Comment: "导航_显示常用文件夹菜单(Ctrl+D)"})
+        KeyArray.push({Key:"d", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 526, Comment: "导航_显示常用文件夹菜单(Ctrl+D)"})
         KeyArray.push({Key:"U", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2001, Comment: "导航_根文件夹"})
         KeyArray.push({Key:"q", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2002, Comment: "导航_上一级文件夹"})
         KeyArray.push({Key:"", Mode: "VIM模式", Group: "导航", Func: "TC_SendPos", Param: 2003, Comment: "导航_打开光标下的文件夹或压缩包"})
@@ -1656,7 +1656,7 @@ TC_Toggle_AutoPercent(){ ;TC_VIM:启用/关闭：自动扩大本侧窗口
     版本:  0.1_2025.06.19
     AHK版本: 2.0.18
     */
-TC_GotoLine(Index){
+TC_GotoLine(Index:=""){
     if (Index="") {
         IB:=InputBox("请输入要跳到的行号", "输入","w200 h100" )
         if (IB.Result = "Cancel")
